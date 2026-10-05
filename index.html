@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudOps Deployment Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div>
+            <h1>CloudOps</h1>
+            <p>Deployment & Service Health Dashboard</p>
+        </div>
+
+        <div class="environment">
+            <span class="status-dot"></span>
+            Production
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <div>
+                <h2>Infrastructure Overview</h2>
+                <p>Monitor application health, deployments and CI/CD activity.</p>
+            </div>
+
+            <div class="version">
+                <span>Current Version</span>
+                <strong>v1.0.0</strong>
+            </div>
+        </section>
+
+        <section class="metrics">
+
+            <div class="card">
+                <div class="card-title">Service Health</div>
+                <div class="metric-value success">Operational</div>
+                <p>All services are responding normally</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">CI/CD Pipeline</div>
+                <div class="metric-value success">Successful</div>
+                <p>Latest build completed successfully</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Deployment</div>
+                <div class="metric-value">Docker</div>
+                <p>Application running inside container</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Environment</div>
+                <div class="metric-value">AWS EC2</div>
+                <p>Ubuntu Linux production server</p>
+            </div>
+
+        </section>
+
+        <section class="content-grid">
+
+            <div class="panel">
+                <div class="panel-header">
+                    <h3>Recent Deployments</h3>
+                    <span class="badge">CI/CD</span>
+                </div>
+
+                <div class="deployment">
+                    <div>
+                        <strong>v1.0.0</strong>
+                        <p>Production deployment</p>
+                    </div>
+                    <span class="success-text">Successful</span>
+                </div>
+
+                <div class="deployment">
+                    <div>
+                        <strong>v0.9.0</strong>
+                        <p>Application update</p>
+                    </div>
+                    <span class="success-text">Successful</span>
+                </div>
+
+                <div class="deployment">
+                    <div>
+                        <strong>v0.8.0</strong>
+                        <p>Docker deployment</p>
+                    </div>
+                    <span class="success-text">Successful</span>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-header">
+                    <h3>Infrastructure</h3>
+                    <span class="badge">AWS</span>
+                </div>
+
+                <div class="infra-row">
+                    <span>Compute</span>
+                    <strong>EC2</strong>
+                </div>
+
+                <div class="infra-row">
+                    <span>Operating System</span>
+                    <strong>Ubuntu 24.04</strong>
+                </div>
+
+                <div class="infra-row">
+                    <span>Container Runtime</span>
+                    <strong>Docker</strong>
+                </div>
+
+                <div class="infra-row">
+                    <span>CI/CD Tool</span>
+                    <strong>Jenkins</strong>
+                </div>
+
+                <div class="infra-row">
+                    <span>Source Control</span>
+                    <strong>GitHub</strong>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="pipeline">
+            <div class="panel-header">
+                <h3>Deployment Pipeline</h3>
+                <span class="badge">Automated</span>
+            </div>
+
+            <div class="pipeline-flow">
+
+                <div class="pipeline-step completed">
+                    <div class="step-number">1</div>
+                    <strong>GitHub</strong>
+                    <span>Source Code</span>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="pipeline-step completed">
+                    <div class="step-number">2</div>
+                    <strong>Jenkins</strong>
+                    <span>Build & Test</span>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="pipeline-step completed">
+                    <div class="step-number">3</div>
+                    <strong>Docker</strong>
+                    <span>Build Image</span>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="pipeline-step completed">
+                    <div class="step-number">4</div>
+                    <strong>AWS EC2</strong>
+                    <span>Deploy</span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        CloudOps Deployment Dashboard · Built with GitHub, Jenkins, Docker & AWS
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
